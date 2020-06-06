@@ -1,5 +1,5 @@
 // Busca os estados na api do IBGE e preenche os "options" do "select"
-function populatesUFs() {
+function populateUFs() {
     const ufSelect = document.querySelector('select[name=uf]');
 
     fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
@@ -10,7 +10,7 @@ function populatesUFs() {
             }
         });
 }
-populatesUFs();
+populateUFs();
 
 // Recebe o estado e busca na api todas as cidades do estado
 function getCities(event) {
@@ -61,7 +61,7 @@ function handleSelectedItem(event) {
 
     // Verifica se existe itens selecionados, se sim pegar os itens selecionados
     const alreadySelected = selectedItems.findIndex(item => {
-        const itemFound = item === itemId;
+        const itemFound = item == itemId;
         return itemFound;
     });
 
