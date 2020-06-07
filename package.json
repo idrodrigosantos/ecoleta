@@ -1,31 +1,9 @@
 {
   "name": "ecoleta",
-  "version": "1.0.0",
-  "description": "Sistema para cadastro e consulta de locais de coleta de resíduos.",
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/imsantosrodrigo/ecoleta.git"
-  },
-  "keywords": [
-    "ecoleta",
-    "html",
-    "css",
-    "javascript",
-    "nodejs",
-    "express",
-    "nunjucks",
-    "sqlite"
-  ],
-  "author": "Rodrio Santos",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/imsantosrodrigo/ecoleta/issues"
-  },
-  "homepage": "https://github.com/imsantosrodrigo/ecoleta#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nunjucks": "^3.2.1",
