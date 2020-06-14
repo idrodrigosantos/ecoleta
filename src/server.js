@@ -1,4 +1,5 @@
 const express = require('express');
+const nunjucks = require('nunjucks');
 const server = express();
 
 // Importa o banco de dados
@@ -10,21 +11,21 @@ server.use(express.static('public'));
 // Habilita o uso do req.body
 server.use(express.urlencoded({ extended: true }));
 
-// Template engine
-const nunjucks = require('nunjucks');
+// Configuração nunjucks
+server.set('view engine', 'njk');
 nunjucks.configure('src/views', {
     express: server,
-    // Não guarda cache no navegador
+    // Não faz cache no navegador
     noCache: true
 });
 
 // Rotas
 server.get('/', (req, res) => {
-    return res.render('index.html');
+    return res.render('index');
 });
 
 server.get('/create-point', (req, res) => {
-    return res.render('create-point.html');
+    return res.render('create-point');
 });
 
 server.post('/save-point', (req, res) => {
@@ -58,7 +59,7 @@ server.post('/save-point', (req, res) => {
             return res.send('Erro no cadastro.');
         }
 
-        return res.render('create-point.html', { saved: true });
+        return res.render('create-point', { saved: true });
     }
 
     db.run(query, values, afterInsertData);
@@ -70,7 +71,7 @@ server.get('/search', (req, res) => {
 
     if (search == '') {
         // Mostra a página com os dados
-        return res.render('search-results.html', { total: 0 });
+        return res.render('search-results', { total: 0 });
     }
 
     // Consulta os dados no banco de dados
@@ -83,9 +84,11 @@ server.get('/search', (req, res) => {
         const total = rows.length;
 
         // Mostra a página com os dados
-        return res.render('search-results.html', { places: rows, total: total });
+        return res.render('search-results', { places: rows, total: total });
     });
 });
 
 // Inicia o servidor
-server.listen(3000);
+server.listen(5000, function () {
+    console.log("Server is running.");
+});
