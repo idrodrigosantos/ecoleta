@@ -30,12 +30,6 @@ $ node src/database/create-database.js
 $ npm start
 ```
 
-No navegador acesse o endereço:
-
-```
-http://localhost:3000/
-```
-
 ## Tecnologias
 
 * HTML
@@ -54,6 +48,8 @@ http://localhost:3000/
 * [Nunjucks](https://github.com/mozilla/nunjucks)
 * [SQLite3](https://github.com/mapbox/node-sqlite3)
 
-## Dependência de desenvolvimento
+## Dependências de desenvolvimento
 
+* [Browsersync](https://github.com/BrowserSync/browser-sync)
 * [Nodemon](https://github.com/remy/nodemon)
+* [npm-run-all](https://github.com/remy/nodemon)
