@@ -5,6 +5,7 @@ Sistema para cadastro e consulta de locais de coleta de resíduos.
 
 * Editor de código-fonte
 * Node.js
+* PostgreSQL
 * Git
 
 ## Instalação
@@ -18,9 +19,21 @@ $ cd ecoleta
 
 # Instale as dependências
 $ npm install
+```
 
-# Crie o banco de dados
-$ node src/database/create-database.js
+## Criação do banco de dados
+No PostgreSQL execute o arquivo `ecoleta.sql` em `database/ecoleta.sql` para criar o banco de dados e tabelas.
+
+Acesse o arquivo `db.js` em `src/config/db.js` e configure o usuário e senha de conexão com o PostgreSQL.
+
+```js
+module.exports = new Pool({
+    // user: 'Usuário PostgreSQL',
+    // password: 'Senha PostgreSQL',    
+    host: 'localhost',
+    port: 5432,
+    database: 'ecoleta'
+});
 ```
 
 ## Executando o sistema
@@ -36,7 +49,7 @@ $ npm start
 * CSS
 * JavaScript
 * Node.js
-* SQLite
+* PostgreSQL
 
 ## API
 
@@ -46,7 +59,7 @@ $ npm start
 
 * [Express](https://github.com/expressjs/express)
 * [Nunjucks](https://github.com/mozilla/nunjucks)
-* [SQLite3](https://github.com/mapbox/node-sqlite3)
+* [node-postgres](https://github.com/brianc/node-postgres)
 
 ## Dependências de desenvolvimento
 
