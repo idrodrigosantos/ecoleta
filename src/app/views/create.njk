@@ -7,15 +7,15 @@
 {% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/styles/create-point.css">
-    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/css/create-point.css">
+    <link rel="stylesheet" href="/css/modal.css">
 {% endblock %}
 
 {% block content %}
 
     {% include "partials/page-header.njk" %}
 
-    <form action="/save-point" method="POST">
+    <form action="/" method="POST">
         <h1>Cadastro do ponto de coleta</h1>
         <fieldset>
             <legend>
@@ -118,5 +118,5 @@
 {% endblock %}
 
 {% block scripts %}
-    <script src="/scripts/create-point.js"></script>
+    <script src="/js/create-point.js"></script>
 {% endblock %}
