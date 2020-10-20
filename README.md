@@ -1,5 +1,5 @@
 # Ecoleta
-Sistema para cadastro e consulta de locais de coleta de resíduos.
+Sistema de coleta de resíduos.
 
 ## Softwares necessários
 
@@ -50,6 +50,8 @@ $ npm start
 * JavaScript
 * Node.js
 * PostgreSQL
+* Nunjucks
+* Express.js
 
 ## API
 
