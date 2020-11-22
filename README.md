@@ -12,7 +12,7 @@ Sistema de coleta de resíduos.
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/imsantosrodrigo/ecoleta.git
+$ git clone https://github.com/idrodrigosantos/ecoleta.git
 
 # Acesse o diretório
 $ cd ecoleta
